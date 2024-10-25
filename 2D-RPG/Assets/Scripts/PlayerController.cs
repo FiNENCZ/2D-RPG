@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
     [SerializeField] private float moveSpeed = 1f;
 
     private PlayerControls playerControls;
@@ -12,6 +13,8 @@ public class NewBehaviourScript : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+
+    private bool facingLeft = false;
 
     private void Awake()
     {
@@ -58,9 +61,11 @@ public class NewBehaviourScript : MonoBehaviour
         if (mousePos.x < playerScreenPoint.x)
         {
             spriteRenderer.flipX = true;
+            FacingLeft = true;
         } else
         {
             spriteRenderer.flipX = false;
+            FacingLeft = false;
         }
     }
 }
