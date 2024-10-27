@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9124263385528962379}
   - component: {fileID: 8686741285014935831}
-  - component: {fileID: 2647833762595199950}
   - component: {fileID: 4184164364851665301}
+  - component: {fileID: 5614424360733287981}
   m_Layer: 0
-  m_Name: Bush
+  m_Name: Crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ba28578169d86f84cb6c1371e4b7ab33, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ebd3046f319213b4cb880b4133d0bab7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,8 +86,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!70 &2647833762595199950
-CapsuleCollider2D:
+--- !u!114 &4184164364851665301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6257955190837280372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85005b225816db6448b93f92b68d0671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyVFX: {fileID: 7833130608920268788, guid: 58d2c75b8c15cb24ebcf155f3b440147, type: 3}
+--- !u!60 &5614424360733287981
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,18 +132,24 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
-  m_Direction: 0
---- !u!114 &4184164364851665301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6257955190837280372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85005b225816db6448b93f92b68d0671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyVFX: {fileID: 7833130608920268788, guid: 89aa930613506a640b58519700bda9f9, type: 3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.32757092, y: 0.64048827}
+      - {x: -0.42879105, y: 0.61767316}
+      - {x: -0.45838547, y: 0.07066119}
+      - {x: -0.82342505, y: 0.08046532}
+      - {x: -0.82480717, y: -0.88730717}
+      - {x: -0.7571709, y: -0.95575213}
+      - {x: 0.78830314, y: -0.9475908}
+      - {x: 0.7609252, y: 0.13454318}
+      - {x: 0.32066107, y: 0.13994038}
+  m_UseDelaunayMesh: 0
