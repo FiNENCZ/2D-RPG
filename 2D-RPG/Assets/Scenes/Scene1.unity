@@ -11823,6 +11823,7 @@ GameObject:
   - component: {fileID: 1432220269}
   - component: {fileID: 1432220268}
   - component: {fileID: 1432220267}
+  - component: {fileID: 1432220272}
   m_Layer: 0
   m_Name: Foreground
   m_TagString: Untagged
@@ -16364,6 +16365,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1432220272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432220265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb63568d6c2bfd44acb17cb7686d062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1436668529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6095597052377527302, guid: 3609586f7accad547b48e0f51af19ff1, type: 3}
@@ -16648,6 +16661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734916065}
   - component: {fileID: 1734916066}
+  - component: {fileID: 1734916067}
   m_Layer: 0
   m_Name: Active Weapon
   m_TagString: Untagged
@@ -16681,6 +16695,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d451827469b7064e8bc3a617a83a614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1734916067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734916064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bbb6aef9355c2a4488935dafd7bf28b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1737729992
