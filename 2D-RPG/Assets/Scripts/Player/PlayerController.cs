@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : Singleton<PlayerController>
 {
     public bool FacingLeft { get { return facingLeft; } }
 
+
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private TrailRenderer trailRenderer;
+    [SerializeField] private Transform weaponCollider;
 
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    private Animator myAnimator;
+    private SpriteRenderer spriteRender;
     private float startingMoveSpeed;
 
     private bool facingLeft = false;
@@ -24,11 +25,11 @@ public class PlayerController : Singleton<PlayerController>
     protected override void Awake()
     {
         base.Awake();
-    
+
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        myAnimator = GetComponent<Animator>();
+        spriteRender = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -37,7 +38,6 @@ public class PlayerController : Singleton<PlayerController>
 
         startingMoveSpeed = moveSpeed;
     }
-
 
     private void OnEnable()
     {
@@ -55,17 +55,22 @@ public class PlayerController : Singleton<PlayerController>
         Move();
     }
 
+    public Transform GetWeaponCollider()
+    {
+        return weaponCollider;
+    }
+
     private void PlayerInput()
     {
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
 
-        animator.SetFloat("moveX", movement.x);
-        animator.SetFloat("moveY", movement.y);
+        myAnimator.SetFloat("moveX", movement.x);
+        myAnimator.SetFloat("moveY", movement.y);
     }
 
     private void Move()
     {
-        rb.MovePosition(rb.position + movement * (moveSpeed * Time.deltaTime));
+        rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
 
     private void AdjustPlayerFacingDirection()
@@ -75,11 +80,12 @@ public class PlayerController : Singleton<PlayerController>
 
         if (mousePos.x < playerScreenPoint.x)
         {
-            spriteRenderer.flipX = true;
+            spriteRender.flipX = true;
             facingLeft = true;
-        } else
+        }
+        else
         {
-            spriteRenderer.flipX = false;
+            spriteRender.flipX = false;
             facingLeft = false;
         }
     }
