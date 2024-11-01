@@ -340,11 +340,13 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1884626371890351851, guid: 07ba1dd8debfa8a4a8f1eebc2b48e432, type: 3}
   bulletMoveSpeed: 6
   burstCount: 3
-  projectilesPerBurst: 3
+  projectilesPerBurst: 1
   angleSpread: 0
   startingDistance: 0.1
   timeBetweenBursts: 0.5
   restTime: 1
+  stagger: 0
+  oscillate: 0
 --- !u!210 &829310949380591949
 SortingGroup:
   m_ObjectHideFlags: 0

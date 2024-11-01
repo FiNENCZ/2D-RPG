@@ -15005,21 +15005,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7016134403383997213, guid: 1fb8bd9c984b80448b4f66b26eaf159b, type: 3}
-      propertyPath: stagger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7016134403383997213, guid: 1fb8bd9c984b80448b4f66b26eaf159b, type: 3}
-      propertyPath: oscillate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7016134403383997213, guid: 1fb8bd9c984b80448b4f66b26eaf159b, type: 3}
-      propertyPath: angleSpread
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7082301499360155425, guid: 1fb8bd9c984b80448b4f66b26eaf159b, type: 3}
       propertyPath: m_Name
       value: Ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082301499360155425, guid: 1fb8bd9c984b80448b4f66b26eaf159b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

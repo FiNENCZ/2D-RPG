@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8686741285014935831}
   - component: {fileID: 2647833762595199950}
   - component: {fileID: 4184164364851665301}
+  - component: {fileID: -5561597728838141632}
   m_Layer: 0
   m_Name: Bush
   m_TagString: Untagged
@@ -134,3 +135,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyVFX: {fileID: 7833130608920268788, guid: 89aa930613506a640b58519700bda9f9, type: 3}
+--- !u!114 &-5561597728838141632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6257955190837280372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c48f24bdd42ec3d47a7f27dc5132594f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoinPrefab: {fileID: 5958064002968820900, guid: 6ca2987a7410c53449194f4c91bdeee5, type: 3}
