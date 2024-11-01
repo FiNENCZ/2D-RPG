@@ -8601,7 +8601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca520be084d58049964333f6ab6f99b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmout: 1
 --- !u!1 &749250577
 GameObject:
   m_ObjectHideFlags: 0
@@ -17061,7 +17060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1836257107
 Transform:
   m_ObjectHideFlags: 0
