@@ -112,7 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48f24bdd42ec3d47a7f27dc5132594f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldCoinPrefab: {fileID: 5958064002968820900, guid: 6ca2987a7410c53449194f4c91bdeee5, type: 3}
+  goldCoin: {fileID: 5958064002968820900, guid: 6ca2987a7410c53449194f4c91bdeee5, type: 3}
+  healthGlobe: {fileID: 5958064002968820900, guid: 424d96963b70ca645bf5deb547e7755e, type: 3}
+  staminaGlobe: {fileID: 5958064002968820900, guid: 0c8fc5adb8955c842b94129d8ecbeef9, type: 3}
 --- !u!60 &5614424360733287981
 PolygonCollider2D:
   m_ObjectHideFlags: 0
