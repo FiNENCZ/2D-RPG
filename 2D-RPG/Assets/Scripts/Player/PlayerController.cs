@@ -39,6 +39,8 @@ public class PlayerController : Singleton<PlayerController>
         playerControls.Combat.Dash.performed += _ => Dash();
 
         startingMoveSpeed = moveSpeed;
+
+        ActiveInventory.Instance.EquipStartingWeapon();
     }
 
     private void OnEnable()
@@ -49,6 +51,11 @@ public class PlayerController : Singleton<PlayerController>
     private void Update()
     {
         PlayerInput();
+    }
+
+    public void OnDisable()
+    {
+        playerControls.Disable();
     }
 
     private void FixedUpdate()
@@ -72,7 +79,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Move()
     {
-        if(knockback.GettingKnockedBack) {
+        if(knockback.GettingKnockedBack || PlayerHealth.Instance.isDead) {
             return;
         }
 
