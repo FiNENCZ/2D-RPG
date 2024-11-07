@@ -32,6 +32,9 @@ public class GrapeProjectile : MonoBehaviour
             float heightT = animCurve.Evaluate(linearT);
             float height = Mathf.Lerp(0f, heightY, heightT);
 
+            // calibration successful hit
+            endPosition.y -= 0.002f;
+
             transform.position = Vector2.Lerp(startPosition, endPosition, linearT) + new Vector2(0f, height);
 
             yield return null;

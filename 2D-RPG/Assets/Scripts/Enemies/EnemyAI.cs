@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -84,28 +85,21 @@ public class EnemyAI : MonoBehaviour
         }
 
         Vector2 directionToPlayer = (PlayerController.Instance.transform.position - transform.position).normalized;
-        // Provedeme Raycast na hráèe
         RaycastHit2D hitPlayer = Physics2D.Raycast(transform.position, directionToPlayer, attackRange, playerLayer);
 
         if (hitPlayer.collider != null && hitPlayer.collider.transform == PlayerController.Instance.transform)
         {
-            // Pokud jsme zasáhli hráèe, zkontrolujeme pøekážky na vrstvì "Environment"
-
-            // Provedeme Raycast na vrstvì Environment a zkontrolujeme, zda nìjaká pøekážka je mezi nepøítelem a hráèem
             RaycastHit2D hitObstacle = Physics2D.Raycast(transform.position, directionToPlayer, attackRange, LayerMask.GetMask("Environment"));
 
-            // Pokud je nìjaká pøekážka a je blíže k nepøíteli než hráè, vrátíme false
+            // If there is an obstacle and it is closer to the enemy than the player, return false
             if (hitObstacle.collider != null && hitObstacle.distance < hitPlayer.distance)
             {
-                Debug.Log("Obstacle detected between enemy and player.");
                 return false;
             }
 
-            // Pokud není žádná pøekážka mezi nepøítelem a hráèem, vrátíme true
             return true;
         }
 
-        // Pokud hráè není v dosahu, vrátíme false
         return false;
     }
 
