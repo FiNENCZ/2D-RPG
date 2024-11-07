@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852135964515341331}
   - component: {fileID: 785385711405033869}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7368369913768374968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LaserSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 4088768867285874438}
   - component: {fileID: 2050874831515137961}
   - component: {fileID: 8932215610887579359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}

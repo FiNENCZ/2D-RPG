@@ -7193,14 +7193,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 870799979377438845, guid: 311cfdaf28e169f4cbe4fbb19ca46afa, type: 3}
-      propertyPath: fullStaminaImage
-      value: 
-      objectReference: {fileID: 21300000, guid: 0d7b39453f177f140998a80a1f44b3af, type: 3}
-    - target: {fileID: 870799979377438845, guid: 311cfdaf28e169f4cbe4fbb19ca46afa, type: 3}
-      propertyPath: emptyStaminaImage
-      value: 
-      objectReference: {fileID: 21300000, guid: 7e6bfadc285d86248999899dfbceeae5, type: 3}
     - target: {fileID: 1864316864780049197, guid: 311cfdaf28e169f4cbe4fbb19ca46afa, type: 3}
       propertyPath: m_Name
       value: Player
@@ -7449,7 +7441,7 @@ GameObject:
   - component: {fileID: 843552050}
   - component: {fileID: 843552049}
   - component: {fileID: 843552053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9547,7 +9539,7 @@ GameObject:
   - component: {fileID: 1432220269}
   - component: {fileID: 1432220268}
   - component: {fileID: 1432220267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14950,7 +14942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4240191441171610858}
   - component: {fileID: 5652540147505950423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AreaEntrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14968,7 +14960,7 @@ GameObject:
   - component: {fileID: 3437345663104859352}
   - component: {fileID: 7830834766671132498}
   - component: {fileID: 4382219713528636120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Portal VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15094,13 +15086,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4096626995373658756, guid: 1fb8bd9c984b80448b4f66b26eaf159b, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 7082301499360155425, guid: 1fb8bd9c984b80448b4f66b26eaf159b, type: 3}
       propertyPath: m_Name
       value: Ghost
       objectReference: {fileID: 0}
     - target: {fileID: 7082301499360155425, guid: 1fb8bd9c984b80448b4f66b26eaf159b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15284,7 +15280,7 @@ GameObject:
   - component: {fileID: 8328059897312774667}
   - component: {fileID: 8508034536826406677}
   - component: {fileID: 1673075054763738489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AreaExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

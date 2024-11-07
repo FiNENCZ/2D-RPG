@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7330984425578809914}
   - component: {fileID: 2847108977633076474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trail Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 2985708915355565252}
   - component: {fileID: 5089542043508750131}
   - component: {fileID: 870799979377438845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,8 +415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc04cd81c29c494ca7207cda80d7c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullStaminaImage: {fileID: 0}
-  emptyStaminaImage: {fileID: 0}
+  fullStaminaImage: {fileID: 21300000, guid: 0d7b39453f177f140998a80a1f44b3af, type: 3}
+  emptyStaminaImage: {fileID: 21300000, guid: 7e6bfadc285d86248999899dfbceeae5, type: 3}
   timeBetweenStaminaRefresh: 3
 --- !u!1 &1946472471365292654
 GameObject:
@@ -427,7 +427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8731023874455351574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SlashSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 2010216359915449792}
   - component: {fileID: 3671265247022764465}
   - component: {fileID: 5412706113193161030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Active Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 8081464668510350175}
   - component: {fileID: 8853748589272369813}
   - component: {fileID: 276549018654432232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 3718693106864408714}
   - component: {fileID: 3122560797292114516}
   - component: {fileID: 2325589033193023229}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7351755598604982455}
   - component: {fileID: 5986633763911470660}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shadows_Sheet_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

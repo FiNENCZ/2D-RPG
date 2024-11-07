@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4157418060513911248}
   - component: {fileID: 868150417372501300}
   - component: {fileID: 8348458544614485367}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,6 +311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 22
   particleOnHitPrefabVFX: {fileID: 8625550378262719509, guid: 4111acb246461d946aba3d9307f7e785, type: 3}
+  isEnemyProjectile: 0
+  projectileRange: 10
 --- !u!114 &8348458544614485367
 MonoBehaviour:
   m_ObjectHideFlags: 0
