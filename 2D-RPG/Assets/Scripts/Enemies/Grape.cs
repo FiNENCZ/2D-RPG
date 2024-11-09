@@ -34,6 +34,5 @@ public class Grape : MonoBehaviour, IEnemy
     public void SpawnProjectileAnimEvent()
     {
         Instantiate(grapeProjectilePrefab, transform.position, Quaternion.identity);
-        Debug.Log("rersd");
     }
 }

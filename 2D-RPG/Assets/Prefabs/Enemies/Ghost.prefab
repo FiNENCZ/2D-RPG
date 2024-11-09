@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3044239901804580284}
   - component: {fileID: 8469566253280953432}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Shadows_Sheet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,6 +259,10 @@ MonoBehaviour:
   enemyType: {fileID: 7016134403383997213}
   attackCooldown: 2
   stopMovingWhileAttacking: 1
+  followPlayer: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &4651255120276503847
 MonoBehaviour:
   m_ObjectHideFlags: 0

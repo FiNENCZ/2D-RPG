@@ -18,7 +18,7 @@ public class EnemyPathfinding : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (knockback.GettingKnockedBack)
         {
@@ -39,6 +39,11 @@ public class EnemyPathfinding : MonoBehaviour
     public void MoveTo(Vector2 targetPosition)
     {
         moveDir = targetPosition;
+    }
+
+    public void FollowPoint(Vector2 targetPosition)
+    {
+        moveDir = (targetPosition - rb.position).normalized;
     }
 
     public void StopMoving()

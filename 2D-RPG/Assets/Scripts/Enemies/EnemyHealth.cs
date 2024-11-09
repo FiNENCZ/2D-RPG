@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -12,15 +13,18 @@ public class EnemyHealth : MonoBehaviour
     private int currentHealth;
     private Knockback knockback;
     private Flash flash;
+    private LevelDone levelDone;
 
     private void Awake()
     {
         flash = GetComponent<Flash>();
         knockback = GetComponent<Knockback>();
+
     }
     public void Start()
     {
         currentHealth = startingHealth;
+        levelDone = FindObjectOfType<LevelDone>();
     }
 
     public void TakeDamage(int damage)
@@ -39,10 +43,12 @@ public class EnemyHealth : MonoBehaviour
     public void DetectDeath()
     {
         if (currentHealth <= 0) 
-        { 
+        {
+            ObjectStateManager.SaveDestroyToSceneState(SceneManager.GetActiveScene().name, name, transform.position);
             Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
             GetComponent<PickUpSpawner>().DropItems();
-            Destroy(gameObject); 
+            Destroy(gameObject);
+            levelDone.EnemyDied();
         }
     }
 }

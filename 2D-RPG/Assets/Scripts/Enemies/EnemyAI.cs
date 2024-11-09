@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private bool stopMovingWhileAttacking = false;
+    [SerializeField] private bool followPlayer = false;
     [SerializeField] private LayerMask playerLayer;
 
     private bool canAttack = true;
@@ -120,6 +121,10 @@ public class EnemyAI : MonoBehaviour
             if (stopMovingWhileAttacking)
             {
                 enemyPathfinding.StopMoving();
+            }
+            else if (followPlayer)
+            {
+                enemyPathfinding.FollowPoint(PlayerController.Instance.transform.position);
             }
             else
             {

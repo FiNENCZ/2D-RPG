@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Destructible : MonoBehaviour
 {
@@ -12,7 +14,9 @@ public class Destructible : MonoBehaviour
         {
             GetComponent<PickUpSpawner>().DropItems();
             Instantiate(destroyVFX, transform.position, Quaternion.identity);
+            ObjectStateManager.SaveDestroyToSceneState(SceneManager.GetActiveScene().name, name, transform.position);
             Destroy(gameObject);
         }
     }
+
 }
