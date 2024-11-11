@@ -34,6 +34,7 @@ public class ActiveInventory : Singleton<ActiveInventory>
     private void ToggleActiveSlot(int numValue)
     {
         ToggleActiveHighlight(numValue - 1);
+        ActiveSkills.Instance.SwitchSkillSet(numValue - 1);
     }
 
     private void ToggleActiveHighlight(int indexNum)
