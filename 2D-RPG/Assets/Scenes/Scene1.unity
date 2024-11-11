@@ -15414,7 +15414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Scene2
-  sceneTransitionName: WEntry
+  sceneTransitionName: 2Entry
 --- !u!1001 &2296278921896992048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20365,7 +20365,7 @@ GameObject:
   - component: {fileID: 8508034535063187712}
   - component: {fileID: 1673075053505016684}
   m_Layer: 8
-  m_Name: AreaExit
+  m_Name: AreaExitToScene2
   m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20383,7 +20383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef98699616bea644bf99277e8907a6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionName: EEntry
+  transitionName: 1Exit
 --- !u!1001 &5676334796901143688
 PrefabInstance:
   m_ObjectHideFlags: 0

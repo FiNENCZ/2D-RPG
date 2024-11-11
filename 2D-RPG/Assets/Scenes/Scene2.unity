@@ -19820,12 +19820,12 @@ GameObject:
   - component: {fileID: 1938614651}
   - component: {fileID: 1938614650}
   m_Layer: 8
-  m_Name: AreaExit
+  m_Name: AreaExitToScene3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1938614650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19838,8 +19838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9467ebed5425d4fa4bacfb2fa5b62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Scene1
-  sceneTransitionName: 1Entry
+  sceneToLoad: Scene3
+  sceneTransitionName: 3Entry
 --- !u!61 &1938614651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20008,7 +20008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef98699616bea644bf99277e8907a6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionName: 2Entry
+  transitionName: 2Exit
 --- !u!1001 &2121716503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20364,7 +20364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Scene1
-  sceneTransitionName: EEntry
+  sceneTransitionName: 1Exit
 --- !u!1001 &2190584072544195180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20608,7 +20608,7 @@ GameObject:
   - component: {fileID: 8508034536826406677}
   - component: {fileID: 1673075054763738489}
   m_Layer: 8
-  m_Name: AreaEnter
+  m_Name: AreaExitToScene1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20626,7 +20626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef98699616bea644bf99277e8907a6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionName: WEntry
+  transitionName: 2Entry
 --- !u!4 &6608819463497928246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6056160817559301805, guid: 314f174c23bbc8545b0fbc176889e20d, type: 3}
