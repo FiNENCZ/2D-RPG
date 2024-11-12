@@ -10,6 +10,8 @@ public class AreaEntrance : MonoBehaviour
     [SerializeField] private string transitionName;
     [SerializeField] private bool fadePortalAfterEnter = false;
     [SerializeField] private GameObject enterPortal;
+    [SerializeField] private bool isNewSkillUnlocked = false;
+    [SerializeField] private Skill skillToUnlock;
 
     private void Start()
     {
@@ -24,6 +26,12 @@ public class AreaEntrance : MonoBehaviour
             {
                 UILevelDone.Instance.ShowLevelCompleteNotification();
                 //enterPortal.SetActive(false);
+            }
+
+            if (isNewSkillUnlocked)
+            {
+                Debug.Log("newSkill");
+                UINewSkill.Instance.ShowNewSkillUnlocked(skillToUnlock);
             }
         }
     }

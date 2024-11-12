@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -83,5 +84,15 @@ public class SceneManagement : Singleton<SceneManagement>
         }
 
         return enemyStates;
+    }
+
+    public void UnlockSkill(Skill skill)
+    {
+        sceneState.UnlockSkill(skill);
+    }
+
+    public bool IsSkillUnlocked(Skill skill)
+    {
+        return sceneState.IsSkillUnlocked(skill);
     }
 }

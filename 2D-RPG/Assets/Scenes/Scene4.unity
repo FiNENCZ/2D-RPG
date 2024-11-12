@@ -23026,11 +23026,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9124263385528962379, guid: 126f509fb313d4d43bda125b875c3fd1, type: 3}
   m_PrefabInstance: {fileID: 1983528225}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2009057531 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8973757201576012594, guid: 2300a4929181f7f419fad482bf23a880, type: 3}
-  m_PrefabInstance: {fileID: 972364887}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054244786
 GameObject:
   m_ObjectHideFlags: 0
@@ -23078,10 +23073,8 @@ MonoBehaviour:
   transitionName: 2Entry
   fadePortalAfterEnter: 0
   enterPortal: {fileID: 0}
-  levelDoneContainer: {fileID: 0}
-  levelDoneTextContent: Level 1 Completed
-  levelDoneDuration: 3
-  levelDoneFadeDuration: 1.5
+  isNewSkillUnlocked: 0
+  skillToUnlock: 0
 --- !u!1001 &2135267237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23471,10 +23464,8 @@ MonoBehaviour:
   transitionName: 4Entry
   fadePortalAfterEnter: 1
   enterPortal: {fileID: 5241773078522863689}
-  levelDoneContainer: {fileID: 2009057531}
-  levelDoneTextContent: Level 1 Completed
-  levelDoneDuration: 3
-  levelDoneFadeDuration: 1.5
+  isNewSkillUnlocked: 1
+  skillToUnlock: 2
 --- !u!4 &6608819463497928246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6056160817559301805, guid: 314f174c23bbc8545b0fbc176889e20d, type: 3}

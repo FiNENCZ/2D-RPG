@@ -46,8 +46,10 @@ public class ActiveSkills : Singleton<ActiveSkills>
         SkillSlot skillSlot = childTransform.GetComponentInChildren<SkillSlot>();
         SkillInfo skillInfo = skillSlot.GetSkillInfo();
 
-
-        skillSlot.UseSkill();
+        if (skillInfo != null && skillInfo.isUnlocked) 
+        {
+            skillSlot.UseSkill();
+        }
     }
 
     public void SwitchSkillSet(int skillSetNumber)
@@ -55,27 +57,27 @@ public class ActiveSkills : Singleton<ActiveSkills>
         switch (skillSetNumber)
         {
             case 0:
-                swordSkill.SetActive(true);
-                bowSkill.SetActive(false);
-                staffSkill.SetActive(false);
+                swordSkill.GetComponent<CanvasGroup>().alpha = 1;
+                bowSkill.GetComponent<CanvasGroup>().alpha = 0;
+                staffSkill.GetComponent<CanvasGroup>().alpha = 0;
                 CurrentSkillSet = SkillSet.Sword;
                 break;
             case 1:
-                swordSkill.SetActive(false);
-                bowSkill.SetActive(false);
-                staffSkill.SetActive(true);
+                swordSkill.GetComponent<CanvasGroup>().alpha = 0;
+                bowSkill.GetComponent<CanvasGroup>().alpha = 0;
+                staffSkill.GetComponent<CanvasGroup>().alpha = 1;
                 CurrentSkillSet = SkillSet.Staff;
                 break;
             case 2:
-                swordSkill.SetActive(false);
-                bowSkill.SetActive(true);
-                staffSkill.SetActive(false);
+                swordSkill.GetComponent<CanvasGroup>().alpha = 0;
+                bowSkill.GetComponent<CanvasGroup>().alpha = 1;
+                staffSkill.GetComponent<CanvasGroup>().alpha = 0;
                 CurrentSkillSet = SkillSet.Bow;
                 break;
             default:
-                swordSkill.SetActive(false);
-                bowSkill.SetActive(false);
-                staffSkill.SetActive(false);
+                swordSkill.GetComponent<CanvasGroup>().alpha = 0;
+                bowSkill.GetComponent<CanvasGroup>().alpha = 0;
+                staffSkill.GetComponent<CanvasGroup>().alpha = 0;
                 break;
         }
     }

@@ -18,8 +18,10 @@ public class BowTrippleArrow : MonoBehaviour, ISkill
 
     public void ExecuteSkill(float cooldown)
     {
+        bow = FindObjectOfType<Bow>();
         if (bow != null && isReady)
         {
+
             StartCoroutine(ExecuteSkillRoutine(cooldown));
         }
     }

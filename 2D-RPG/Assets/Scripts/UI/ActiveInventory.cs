@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ActiveInventory : Singleton<ActiveInventory>
 {
-    private int activeSlotIndexNum = 0;
+    [HideInInspector]
+    public int activeSlotIndexNum = 0;
 
     private PlayerControls playerControls;
 
@@ -31,7 +32,7 @@ public class ActiveInventory : Singleton<ActiveInventory>
         ToggleActiveHighlight(0);
     }
 
-    private void ToggleActiveSlot(int numValue)
+    public void ToggleActiveSlot(int numValue)
     {
         ToggleActiveHighlight(numValue - 1);
         ActiveSkills.Instance.SwitchSkillSet(numValue - 1);

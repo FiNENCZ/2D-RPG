@@ -14,6 +14,8 @@ public class SceneState : ScriptableObject
 {
     public Dictionary<string, List<ObjectState>> sceneEnemyStates = new Dictionary<string, List<ObjectState>>();
 
+    public Dictionary<Skill, bool> skillsUnlocked = new Dictionary<Skill, bool>();
+
     // Pøidá nebo aktualizuje stav nepøátel pro danou scénu
     public void SaveObjectStates(string sceneName, List<ObjectState> enemyStates)
     {
@@ -54,5 +56,22 @@ public class SceneState : ScriptableObject
     public bool DoesSceneExist(string sceneName)
     {
         return sceneEnemyStates.ContainsKey(sceneName);
+    }
+
+    public void UnlockSkill(Skill skill)
+    {
+        skillsUnlocked[skill] = true;
+        Debug.Log($"{skill} byl odemèen.");
+    }
+
+    // Ovìøí, zda byl skill odemèen
+    public bool IsSkillUnlocked(Skill skill)
+    {
+        if (skillsUnlocked.TryGetValue(skill, out bool isUnlocked))
+        {
+            return isUnlocked;
+        }
+        // Pokud skill není v dictionary, vrací false
+        return false;
     }
 }

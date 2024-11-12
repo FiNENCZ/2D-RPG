@@ -20009,6 +20009,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionName: 2Exit
+  fadePortalAfterEnter: 0
+  enterPortal: {fileID: 0}
+  isNewSkillUnlocked: 0
+  skillToUnlock: 0
 --- !u!1001 &2121716503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20627,6 +20631,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionName: 2Entry
+  fadePortalAfterEnter: 0
+  enterPortal: {fileID: 0}
+  isNewSkillUnlocked: 1
+  skillToUnlock: 0
 --- !u!4 &6608819463497928246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6056160817559301805, guid: 314f174c23bbc8545b0fbc176889e20d, type: 3}

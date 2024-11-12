@@ -17,10 +17,13 @@ public class StaffSlashLaser : MonoBehaviour, ISkill
     }
     public void ExecuteSkill(float cooldown)
     {
+        staff = FindObjectOfType<Staff>();
         if (staff != null && isReady)
         {
             GameObject newLaser = Instantiate(staff.magicLaser, staff.magicLaserSpawnPoint.position, Quaternion.identity);
             newLaser.GetComponent<MagicLaser>().LaserSlash(staff.weaponInfo.weaponRange, slashDeegre);
+
+            Debug.Log("Utok provede");
         }
 
         StartCoroutine(SetCooldown(cooldown));

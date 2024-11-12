@@ -17,11 +17,6 @@ public class SwordStomp : MonoBehaviour, ISkill
     {
         Transform stompAreaTransform = PlayerController.Instance.transform.Find("Stomp Area");
         stompAreaCollider = stompAreaTransform.GetComponent<Collider2D>();
-
-        Debug.Log(stompAreaTransform.name);
-        Debug.Log(stompAreaCollider.name);
-
-
     }
 
     public void ExecuteSkill(float cooldown)

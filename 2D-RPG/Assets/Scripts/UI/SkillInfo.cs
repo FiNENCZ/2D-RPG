@@ -12,4 +12,5 @@ public class SkillInfo : ScriptableObject
     public float skillCooldown;
     public int skillMana;
     public Skill skill;
+    public bool isUnlocked = false;
 }
