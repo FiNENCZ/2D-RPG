@@ -10,13 +10,13 @@ public class Sword : MonoBehaviour, IWeapon
     [SerializeField] private WeaponInfo weaponInfo;
 
     private Transform weaponCollider;
-    private Animator myAnimator;
+    private Animator animator;
 
     private GameObject slashAnim;
 
     private void Awake()
     {
-        myAnimator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -37,7 +37,7 @@ public class Sword : MonoBehaviour, IWeapon
 
     public void Attack()
     {
-        myAnimator.SetTrigger("Attack");
+        animator.SetTrigger("Attack");
         weaponCollider.gameObject.SetActive(true);
         slashAnim = Instantiate(slashAnimPrefab, slashAnimSpawnPoint.position, Quaternion.identity);
         slashAnim.transform.parent = this.transform.parent;

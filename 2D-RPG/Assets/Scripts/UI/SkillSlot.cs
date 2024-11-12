@@ -36,6 +36,6 @@ public class SkillSlot : MonoBehaviour
 
     public void UseSkill()
     {
-        currentSkill.ExecuteSkill();
+        currentSkill.ExecuteSkill(skillInfo.skillCooldown);
     }
 }

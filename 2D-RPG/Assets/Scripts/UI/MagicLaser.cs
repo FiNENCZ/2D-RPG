@@ -36,6 +36,7 @@ public class MagicLaser : MonoBehaviour
         StartCoroutine(IncreaseLaserLengthRoutine());
     }
 
+
     private IEnumerator IncreaseLaserLengthRoutine()
     {
         float timePassed = 0f;
@@ -57,6 +58,44 @@ public class MagicLaser : MonoBehaviour
 
         StartCoroutine(GetComponent<SpriteFade>().SlowFadeRoutine());
     }
+
+    public void LaserSlash(float laserRange, float slashDeegre)
+    {
+        this.laserRange = laserRange;
+        StartCoroutine(LaserSlashRoutine(slashDeegre));
+    }
+
+    private IEnumerator LaserSlashRoutine(float slashDeegre)
+    {
+        float timePassed = 0f;
+
+        // Laser is on final range immediately
+        spriteRenderer.size = new Vector2(laserRange, 1f);
+        capsuleCollider2D.size = new Vector2(laserRange, capsuleCollider2D.size.y);
+        capsuleCollider2D.offset = new Vector2(laserRange / 2, capsuleCollider2D.offset.y);
+
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        // Mouse course is center of slash rotation
+        Vector2 directionToMouse = mousePosition - transform.position;
+        float startRotation = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
+        float middleRotation = startRotation - slashDeegre/2;
+        float targetRotation = middleRotation + slashDeegre;
+
+        // Duration of rotation
+        while (timePassed < 0.5f)
+        {
+            timePassed += Time.deltaTime;
+            float currentRotation = Mathf.Lerp(middleRotation, targetRotation, timePassed / 0.5f);
+            transform.rotation = Quaternion.Euler(0f, 0f, currentRotation);
+            yield return null;
+        }
+
+        transform.rotation = Quaternion.Euler(0f, 0f, targetRotation);
+        StartCoroutine(GetComponent<SpriteFade>().SlowFadeRoutine());
+    }
+
 
     private void LaserFaceMouse()
     {

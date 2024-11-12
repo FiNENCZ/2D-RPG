@@ -60,21 +60,18 @@ public class ActiveSkills : Singleton<ActiveSkills>
                 staffSkill.SetActive(false);
                 CurrentSkillSet = SkillSet.Sword;
                 break;
-
             case 1:
-                swordSkill.SetActive(false);
-                bowSkill.SetActive(true);
-                staffSkill.SetActive(false);
-                CurrentSkillSet = SkillSet.Bow;
-                break;
-
-            case 2:
                 swordSkill.SetActive(false);
                 bowSkill.SetActive(false);
                 staffSkill.SetActive(true);
                 CurrentSkillSet = SkillSet.Staff;
                 break;
-
+            case 2:
+                swordSkill.SetActive(false);
+                bowSkill.SetActive(true);
+                staffSkill.SetActive(false);
+                CurrentSkillSet = SkillSet.Bow;
+                break;
             default:
                 swordSkill.SetActive(false);
                 bowSkill.SetActive(false);

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Staff : MonoBehaviour, IWeapon
 {
-    [SerializeField] private WeaponInfo weaponInfo;
-    [SerializeField] private GameObject magicLaser;
-    [SerializeField] private Transform magicLaserSpawnPoint;
+    [SerializeField] public WeaponInfo weaponInfo;
+    [SerializeField] public GameObject magicLaser;
+    [SerializeField] public Transform magicLaserSpawnPoint;
 
     private Animator animator;
 

@@ -1,4 +1,4 @@
 public interface ISkill
 {
-    void ExecuteSkill();
+    void ExecuteSkill(float cooldown);
 }
