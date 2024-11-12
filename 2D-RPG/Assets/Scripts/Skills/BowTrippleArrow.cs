@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class BowCriticArrow : MonoBehaviour, ISkill
+public class BowTrippleArrow : MonoBehaviour, ISkill
 {
     [SerializeField] private float shotDelay = 0.1f;
 

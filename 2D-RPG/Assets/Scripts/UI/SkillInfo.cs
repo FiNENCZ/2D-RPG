@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum Skill { SwordLifesteal, BowCriticArrow, StaffFree}
+public enum Skill { SwordStomp, BowTripleArrow, StaffSlashLaser}
 
 
 [CreateAssetMenu(menuName = "New Skill")]

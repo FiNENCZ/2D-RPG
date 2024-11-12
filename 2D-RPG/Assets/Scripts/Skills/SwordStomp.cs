@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SwordLifesteal : MonoBehaviour, ISkill
+public class SwordStomp : MonoBehaviour, ISkill
 {
 
     [SerializeField] public float pushDuration = 0.15f;
