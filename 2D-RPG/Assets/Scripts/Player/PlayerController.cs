@@ -12,6 +12,8 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private TrailRenderer trailRenderer;
     [SerializeField] private Transform weaponCollider;
 
+    [HideInInspector] public Vector3 startingPosition;
+
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
@@ -19,6 +21,7 @@ public class PlayerController : Singleton<PlayerController>
     private SpriteRenderer spriteRender;
     private float startingMoveSpeed;
     private Knockback knockback;
+
 
     private bool facingLeft = false;
     private bool isDashing = false;
@@ -41,6 +44,8 @@ public class PlayerController : Singleton<PlayerController>
         startingMoveSpeed = moveSpeed;
 
         ActiveInventory.Instance.EquipStartingWeapon();
+
+        startingPosition = transform.position;
     }
 
     private void OnEnable()
@@ -124,5 +129,10 @@ public class PlayerController : Singleton<PlayerController>
         trailRenderer.emitting = false;
         yield return new WaitForSeconds(dashCD);
         isDashing = false;
+    }
+
+    public void SetStartingPosition()
+    {
+        transform.position = startingPosition;
     }
 }

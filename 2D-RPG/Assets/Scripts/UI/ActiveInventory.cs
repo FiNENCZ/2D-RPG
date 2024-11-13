@@ -46,7 +46,9 @@ public class ActiveInventory : Singleton<ActiveInventory>
         {
             inventorySlot.GetChild(0).gameObject.SetActive(false);
         }
-
+        Debug.Log(indexNum);
+        Debug.Log(this.transform.GetChild(indexNum).name);
+        Debug.Log(this.transform.GetChild(indexNum).GetChild(0).name);
         this.transform.GetChild(indexNum).GetChild(0).gameObject.SetActive(true);
 
         ChangeActiveWeapon();

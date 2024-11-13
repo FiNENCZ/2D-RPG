@@ -14,16 +14,10 @@ public class SceneManagement : Singleton<SceneManagement>
         this.SceneTransitionName = sceneTransitionName;
     }
 
-    //public void Start()
-    //{
-    //    Debug.Log("Start SceenManagement");
-    //    PlayerPrefs.DeleteAll();
-    //    PlayerPrefs.Save();
-    //}
 
     private void Start()
     {
-        //SaveCurrentEnemyStates();
+        sceneState.ClearAllStates();
     }
 
     public void SaveCurrentEnemyStates()
@@ -94,5 +88,14 @@ public class SceneManagement : Singleton<SceneManagement>
     public bool IsSkillUnlocked(Skill skill)
     {
         return sceneState.IsSkillUnlocked(skill);
+    }
+
+    public void RestartGame()
+    {
+        sceneState.ClearAllStates();
+        PlayerController.Instance.SetStartingPosition();
+        SceneManager.LoadScene("Scene1");
+        UINewSkill.Instance.DeactivateAllSkills();
+
     }
 }

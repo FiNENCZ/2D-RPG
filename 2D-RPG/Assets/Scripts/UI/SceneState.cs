@@ -27,7 +27,6 @@ public class SceneState : ScriptableObject
         else
         {
             sceneEnemyStates.Add(sceneName, enemyStates);
-            Debug.Log("Stava uložen");
         }
     }
 
@@ -73,5 +72,11 @@ public class SceneState : ScriptableObject
         }
         // Pokud skill není v dictionary, vrací false
         return false;
+    }
+
+    public void ClearAllStates()
+    {
+        sceneEnemyStates.Clear();
+        skillsUnlocked.Clear();
     }
 }

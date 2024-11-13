@@ -21,19 +21,33 @@ public class AreaEntrance : MonoBehaviour
             CameraController.Instance.SetPlayerCameraFollow();
             UIFade.Instance.FadeToClear();
 
-
-            if (fadePortalAfterEnter)
+            if (fadePortalAfterEnter && isNewSkillUnlocked)
+            {
+                ShowLevelCompletionAndSkillUnlocked(skillToUnlock);
+            }
+            else if (fadePortalAfterEnter)
             {
                 UILevelDone.Instance.ShowLevelCompleteNotification();
-                //enterPortal.SetActive(false);
-            }
 
-            if (isNewSkillUnlocked)
+            } else if (isNewSkillUnlocked)
             {
-                Debug.Log("newSkill");
                 UINewSkill.Instance.ShowNewSkillUnlocked(skillToUnlock);
             }
         }
     }
 
+    public void ShowLevelCompletionAndSkillUnlocked(Skill skillToUnlock)
+    {
+        StartCoroutine(LevelCompletionAndSkillRoutine(skillToUnlock));
+    }
+
+    private IEnumerator LevelCompletionAndSkillRoutine(Skill skillToUnlock)
+    {
+        // Spustíme ShowLevelCompleteNotification a poèkáme na dokonèení
+        UILevelDone.Instance.ShowLevelCompleteNotification();
+        yield return StartCoroutine(UILevelDone.Instance.ShowLevelCompleteRoutine());
+
+        // Poté, co se dokonèí první korutina, spustíme ShowNewSkillUnlocked
+        UINewSkill.Instance.ShowNewSkillUnlocked(skillToUnlock);
+    }
 }

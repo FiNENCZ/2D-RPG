@@ -21,6 +21,10 @@ public class SwordStomp : MonoBehaviour, ISkill
 
     public void ExecuteSkill(float cooldown)
     {
+        if (stompAreaCollider == null)
+        {
+            stompAreaCollider = PlayerController.Instance.transform.Find("Stomp Area").GetComponent<Collider2D>();
+        }
 
         if (isReady)
         {
@@ -29,6 +33,7 @@ public class SwordStomp : MonoBehaviour, ISkill
             contactFilter.SetLayerMask(LayerMask.GetMask("Enemy"));
 
             Collider2D[] enemiesInArea = new Collider2D[10];
+            Debug.Log(stompAreaCollider.name);
             int enemyCount = stompAreaCollider.OverlapCollider(contactFilter, enemiesInArea);
 
             Shake.Instance.ShakeScreen();

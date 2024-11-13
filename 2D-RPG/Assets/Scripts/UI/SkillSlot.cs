@@ -20,11 +20,19 @@ public class SkillSlot : MonoBehaviour
     private void Start()
     {
         AttachSkillScript();
-        abilityImage.fillAmount = 0;
+
+        if (abilityImage != null)
+        {
+            abilityImage.fillAmount = 0;
+        }
     }
 
     private void AttachSkillScript()
     {
+        if (skillInfo == null)
+        {
+            return;
+        }
         switch (skillInfo.skill)
         {
             case Skill.SwordStomp:

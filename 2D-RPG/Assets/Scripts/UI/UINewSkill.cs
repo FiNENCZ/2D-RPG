@@ -37,10 +37,16 @@ public class UINewSkill : Singleton<UINewSkill>
         trippleArrowText= "Shoots 3 arrows at each other";
         slashLaserText = "Launches the leser across the board";
 
-        ShowHideAndActivateSkill(Skill.SwordStomp, false);
-        ShowHideAndActivateSkill(Skill.BowTripleArrow, false);
-        ShowHideAndActivateSkill(Skill.StaffSlashLaser, false);
+        DeactivateAllSkills();
 
+    }
+
+    public void DeactivateAllSkills()
+    {
+        foreach (Skill skill in System.Enum.GetValues(typeof(Skill)))
+        {
+            ShowHideAndActivateSkill(skill, false);
+        }
     }
 
     public void FadeToBlack()
@@ -80,7 +86,7 @@ public class UINewSkill : Singleton<UINewSkill>
                 ActiveInventory.Instance.ToggleActiveSlot(1);
                 SceneManagement.Instance.UnlockSkill(skill);
                 ShowHideAndActivateSkill(skill, true);
-                ActiveInventory.Instance.ToggleActiveSlot(ActiveInventory.Instance.activeSlotIndexNum);
+                ActiveInventory.Instance.ToggleActiveSlot(ActiveInventory.Instance.activeSlotIndexNum + 1);
                 break;
             case Skill.StaffSlashLaser:
                 skillImage.sprite = slashLaserImage;
@@ -88,7 +94,7 @@ public class UINewSkill : Singleton<UINewSkill>
                 ActiveInventory.Instance.ToggleActiveSlot(2);
                 SceneManagement.Instance.UnlockSkill(skill);
                 ShowHideAndActivateSkill(skill, true);
-                ActiveInventory.Instance.ToggleActiveSlot(ActiveInventory.Instance.activeSlotIndexNum);
+                ActiveInventory.Instance.ToggleActiveSlot(ActiveInventory.Instance.activeSlotIndexNum + 1);
                 break;
             case Skill.BowTripleArrow:
                 skillImage.sprite = trippleArrowImage;
@@ -96,7 +102,7 @@ public class UINewSkill : Singleton<UINewSkill>
                 ActiveInventory.Instance.ToggleActiveSlot(3);
                 SceneManagement.Instance.UnlockSkill(skill);
                 ShowHideAndActivateSkill(skill, true);
-                ActiveInventory.Instance.ToggleActiveSlot(ActiveInventory.Instance.activeSlotIndexNum);
+                ActiveInventory.Instance.ToggleActiveSlot(ActiveInventory.Instance.activeSlotIndexNum + 1);
                 break;
 
         }

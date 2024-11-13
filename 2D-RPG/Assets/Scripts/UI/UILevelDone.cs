@@ -58,7 +58,7 @@ public class UILevelDone : Singleton<UILevelDone>
         StartCoroutine(ShowLevelCompleteRoutine());
     }
 
-    private IEnumerator ShowLevelCompleteRoutine()
+    public IEnumerator ShowLevelCompleteRoutine()
     {
         yield return new WaitForSeconds(1);
         FadeToBlack();
